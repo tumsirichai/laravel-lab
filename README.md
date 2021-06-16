@@ -51,6 +51,7 @@ docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 
 ## Resources
 
+- [https://armno.in.th](https://armno.in.th/2018/08/16/blog-automated-deployment/)
 - [https://www.jittagornp.me](https://www.jittagornp.me/blog/lets-make-your-blog/)
 - [https://ima8.me/](https://ima8.me/2018/06/424/make-your-own-ci-cd-pipelines-%E0%B9%83%E0%B8%84%E0%B8%A3%E0%B9%86-%E0%B8%81%E0%B9%87%E0%B8%97%E0%B8%B3-ci-cd-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%AD%E0%B8%87/)
 - [https://articles.devsight.me/](https://articles.devsight.me/ci-cd-%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3-auto-deploy-code-frontend-vue-js-react-angular-ea69d4d5ab78)
