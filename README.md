@@ -47,6 +47,15 @@ docker-compose -f docker-compose.yml -f docker-compose.production.yml up
 docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 ```
 
+### Flow (คร่าวๆ)
+- ใช้ Hugo ผ่าน docker container
+- Push code ขึ้นไปบน GitHub repo
+- ให้ CircleCI build docker image จาก Dockerfile ใน repo
+- Push docker image ไปที่ dockerhub
+- บน production server: pull docker image จาก dockerhub แล้วรัน container
+
+
+
 ---
 
 ## Resources
