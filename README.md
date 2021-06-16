@@ -1,7 +1,7 @@
 # CI/CD with Laravel
 
 
-![ci/cd](CI_-CD.png)
+![ci/cd](cicd.png)
 
 ![ci](ci.png)
 
