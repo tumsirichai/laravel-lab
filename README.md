@@ -1,18 +1,28 @@
 # CI/CD with Laravel
+
+
 ![amazon](cicd-amazon.jpg)
 
 ### CI หรือ Continuous Integration
+
+![ci](ci.png)
+
 เป็นกระบวนการอย่างหนึ่ง ในการรวบรวมซอฟแวร์ที่อาจเกิดจากนักพัฒนาหนึ่งหรือหลายคนเข้าด้วยกันเป็นหนึ่งเดียว
 
-> ส่วน CD จะมีความหมายอยู่สองแบบได้แก่ Continuous Delivery และ Continuous Deployment โดย
+> * CD จะมีความหมายอยู่สองแบบคือ Continuous Delivery และ Continuous Deployment*
 
 ### Continuous Deployment 
+![cd1](cd1.png)
 เป็นกระบวนการอย่างหนึ่ง ในการเปิดตัวซอฟต์แวร์ โดยการส่งมอบซอฟต์แวร์ทุกขั้นตอนจนถึงการ Deployment ขึ้น Production จะทำในรูปแบบอัตโนมัติทั้งหมด (ขึ้น Production ทันที)
 
 ### Continuous Delivery 
+![cd2](cd2.png)
 เป็นกระบวนการอย่างหนึ่ง ในการเปิดตัวซอฟต์แวร์ คล้ายกับ Continuous Deployment เพียงแต่ตอนส่งมอบซอฟต์แวร์ขึ้น Production จะต้องมีการได้รับอนุมัติหรือการอนุญาตจากผู้ที่มีสิทธิ์ตัดสินใจเปิดตัวซอฟต์แวร์ ซึ่งรูปแบบนี้เป็นแบบ Manual (ต้องมีการอนุญาติก่อนขึ้น Production)
 
-## docker-compose.yml
+------
+
+
+## Docker compose
 - docker-compose.yml สร้าง build container port 3000
 - docker-compose.development.yml สร้าง container ชื่อ laravel-docker-development
 - docker-compose.production.yml คือเราจะสั่งให้สร้าง container ชื่อ laravel-docker-production
