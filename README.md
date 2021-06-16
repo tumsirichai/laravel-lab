@@ -9,17 +9,17 @@ CI/CD with Laravel
 
 ## สั่งรัน development
 ```
-docker-compose -f docker-compose.yaml -f docker-compose.development.yaml up
+docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 ```
 ## สั่งรัน production
 ```
-docker-compose -f docker-compose.yaml -f docker-compose.production.yaml up
+docker-compose -f docker-compose.yml -f docker-compose.production.yml up
 ```
 
-## หรือสร้าง shell script เพื่อ run ได้ง่ายขึ้น
+## หรือสร้าง shell script เพื่อ run ได้ง่ายขึ้น เช่น development.sh
 
-```development.sh
-docker-compose -f docker-compose.yaml -f docker-compose.development.yaml up
+```
+docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 ```
 
 ---
