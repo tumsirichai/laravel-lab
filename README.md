@@ -1,7 +1,7 @@
 # CI/CD with Laravel
 
 
-![amazon](cicd-amazon.jpg)
+![ci/cd](CI_-CD.png)
 
 ![ci](ci.png)
 
