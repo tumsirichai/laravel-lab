@@ -3,20 +3,20 @@
 
 ![amazon](cicd-amazon.jpg)
 
-### CI หรือ Continuous Integration
-
 ![ci](ci.png)
 
+### CI หรือ Continuous Integration
 เป็นกระบวนการอย่างหนึ่ง ในการรวบรวมซอฟแวร์ที่อาจเกิดจากนักพัฒนาหนึ่งหรือหลายคนเข้าด้วยกันเป็นหนึ่งเดียว
 
 > * CD จะมีความหมายอยู่สองแบบคือ Continuous Delivery และ Continuous Deployment*
 
-### Continuous Deployment 
 ![cd1](cd1.png)
+
+### Continuous Deployment 
 เป็นกระบวนการอย่างหนึ่ง ในการเปิดตัวซอฟต์แวร์ โดยการส่งมอบซอฟต์แวร์ทุกขั้นตอนจนถึงการ Deployment ขึ้น Production จะทำในรูปแบบอัตโนมัติทั้งหมด (ขึ้น Production ทันที)
 
-### Continuous Delivery 
 ![cd2](cd2.png)
+### Continuous Delivery 
 เป็นกระบวนการอย่างหนึ่ง ในการเปิดตัวซอฟต์แวร์ คล้ายกับ Continuous Deployment เพียงแต่ตอนส่งมอบซอฟต์แวร์ขึ้น Production จะต้องมีการได้รับอนุมัติหรือการอนุญาตจากผู้ที่มีสิทธิ์ตัดสินใจเปิดตัวซอฟต์แวร์ ซึ่งรูปแบบนี้เป็นแบบ Manual (ต้องมีการอนุญาติก่อนขึ้น Production)
 
 ------
