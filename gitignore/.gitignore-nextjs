@@ -1,0 +1,6 @@
+.env.local
+.env
+.next/
+.vscode/
+_static/
+node_modules/
