@@ -21,3 +21,10 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+public/content
+storage/content
+.DS_Store
+.env
+db
+env.local
