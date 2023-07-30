@@ -1,0 +1,75 @@
+version: "3.3"
+services:
+
+  laravel10-authentication-middleware_phpfpm:
+    build:
+      args:
+        user: tum
+        uid: 1000
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: laravel10-authentication-middleware_phpfpm
+    links:
+      - laravel10-authentication-middleware_mariadb
+      - laravel10-authentication-middleware_redis
+    volumes:
+      - ./docker/httpd/php.ini:/usr/local/etc/php/php.ini
+      - ./:/var/www
+    networks:
+      - laravel10-authentication-middleware-network
+
+  laravel10-authentication-middleware_mariadb:
+    image: "mariadb:10.4.27"
+    container_name: laravel10-authentication-middleware_mariadb
+    restart: always
+    ports:
+      - 3501:3306
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: "DB_ROOT_PASSWORD"
+      MARIADB_DATABASE: ${DB_DATABASE}
+      MARIADB_USER: ${DB_USERNAME}
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      TZ: Asia/Bangkok
+    networks:
+      - laravel10-authentication-middleware-network
+
+  laravel10-authentication-middleware_adminer:
+    image: adminer:4.8.1
+    container_name: laravel10-authentication-middleware_adminer
+    environment:
+    - ADMINER_DEFAULT_SERVER=laravel10-authentication-middleware_mariadb
+    - ADMINER_DEFAULT_DB_DRIVER=mysql
+    ports:
+      - 7501:8080
+    networks:
+      - laravel10-authentication-middleware-network
+  
+  nginx:
+    image: nginx:alpine
+    container_name: laravel10-authentication-middleware_web
+    restart: unless-stopped
+    expose:
+      - "8002"
+    ports:
+      - "8501:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx:/etc/nginx/conf.d/
+    networks:
+      - laravel10-authentication-middleware-network
+
+  laravel10-authentication-middleware_redis:
+    image: 'redis:7.0.12-alpine'
+    restart: always
+    container_name: laravel10-authentication-middleware_redis
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
+    ports:
+      - "6379:6379"
+    networks:
+      - laravel10-authentication-middleware-network
+
+networks:
+  laravel10-authentication-middleware-network:
+    driver: bridge
