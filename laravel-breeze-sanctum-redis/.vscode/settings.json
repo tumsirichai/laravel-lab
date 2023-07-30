@@ -1,0 +1,9 @@
+{
+    "workbench.colorCustomizations": {
+        "tab.activeBorder": "#59ff00",
+        "editor.findMatchBackground":"#FF9632",
+        "editor.findMatchHighlightBackground":"#FFFF00",
+        "editorBracketMatch.background":"#5b08f5",
+        "editorBracketMatch.border":"#3cff00",
+    }
+}
